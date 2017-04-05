@@ -5,15 +5,48 @@
   <head>
     <title>hello world</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script>
-      $("#scroll").click(function(){
+
+      $(document).ready(function(){
+
+        $("#scroll").click(function(){
+          // $("body,html").scrollTop(0)
+          $("body").animate({
+              scrollTop: 0
+            },
+            1000
+          )
+        })
+
+        $("p").click(function(){
+          $("p").removeClass("red")
+          $(this).addClass("red")
+          // $(this).html("Replaced")
+          // $(this).remove()
+        })
 
       })
+
     </script>
+
+    <style>
+
+      #scroll {
+        background: blue;
+        border: 3px dotted red;
+        color: white;
+      }
+
+      .red {
+        background: red;
+      }
+
+    </style>
   </head>
 
   <body>
-    <h1>
+    <h1 name="Top">
       Hello World
     </h1>
 
